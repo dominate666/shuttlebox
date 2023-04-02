@@ -61,6 +61,16 @@ export function useCheckedData() {
   }
   return [checkedData, addCheckedData, removeCheckedData];
 }
+
+export function useDragedItem(){
+    const dragedItem=ref(null)
+    function setDragedItem(item){
+        dragedItem.value=item;
+    }
+
+    return [dragedItem,setDragedItem]
+}
+
 export function useComputedData(data, targetIndex, rightListData,checkedData) {
   const leftTitle = computed(() => data[targetIndex.value].title);
   const leftListData = computed(() => {
