@@ -1,4 +1,5 @@
 <template>
+   <!-- :key="item.id" 必须存在，否则select  change的时候数据界面显示有问题 -->
   <div
     v-for="item of data"
     :key="item.id"
